@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah Jenkins",
-      role: "CTO at InnovateX",
-      content: "Scarlett transformed our completely outdated e-commerce system into an incredibly fast, highly scalable architecture. Our conversion rate increased by 40% after the launch.",
-      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150"
+      name: "Kamaruddin, S. Ag",
+      role: "Head of KUA Kec. Tebing Tinggi",
+      content: "The KUA Tebing Tinggi web portal engineered by M. Saman has transformed how we deliver public religious services. It is remarkably responsive, secure, and makes institutional information seamlessly accessible to our community.",
+      image: "https://kuatebingtinggi.pages.dev/img/kepalakua.webp"
     },
     {
       name: "David Chen",
-      role: "Founder, Peak Analytics",
-      content: "One of the best engineering minds I've worked with. The dashboard interface was not only flawlessly built, but also incredibly intuitive for non-technical users.",
+      role: "CEO at Karyzen Store",
+      content: "Saman developed our Karyzen Store digital platform with outstanding precision. From the intuitive product showcase to the streamlined checkout workflow, our user experience and customer engagement saw an immediate boost.",
       image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=150"
     },
     {
-      name: "Maria Rodriguez",
-      role: "Product Lead, Fintech Nexus",
-      content: "Delivered complex fintech integrations reliably and on time. Her attention to detail regarding both security protocols and UX is unparalleled.",
-      image: "https://images.pexels.com/photos/2743754/pexels-photo-2743754.jpeg?auto=compress&cs=tinysrgb&w=150"
+      name: "Abu Bakar, S. Ag",
+      role: "Islamic Religious Counselor",
+      content: "ALPA Apps has revolutionized our administrative and routine reporting workflows. The interface is clean, fast, and eliminates tedious manual reporting, saving counselors countless hours every week.",
+      image: "https://kuatebingtinggi.pages.dev/img/abubakar.webp"
     }
   ];
 

@@ -1,10 +1,26 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, MessageSquare } from "lucide-react";
 import { Input } from "../lightswind/input";
 import { Textarea } from "../lightswind/textarea";
 import { Button } from "../lightswind/button";
 
 export const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name.trim() || !formData.message.trim()) return;
+
+    const text = `Halo M. Saman,\n\nNama: ${formData.name}\nEmail: ${formData.email || "-"}\n\nPesan:\n${formData.message}`;
+    const whatsappUrl = `https://wa.me/6285669570492?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section id="contact" className="max-w-7xl mx-auto px-6 py-24">
       <motion.div
@@ -64,13 +80,16 @@ export const ContactSection = () => {
 
           {/* Form */}
           <div className="flex-1 glass-panel p-8 rounded-[2rem] border border-foreground/10 relative">
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1.5">Your Name</label>
                 <Input 
                   type="text" 
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="rounded-xl py-3 px-4 bg-foreground/5 border-foreground/10 text-foreground focus-visible:ring-primary placeholder:text-muted-foreground/50"
-                  placeholder="John Doe"
+                  placeholder="e.g. Budi Santoso"
                 />
               </div>
               
@@ -78,8 +97,11 @@ export const ContactSection = () => {
                 <label className="block text-sm font-medium text-muted-foreground mb-1.5">Your Email</label>
                 <Input 
                   type="email" 
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="rounded-xl py-3 px-4 bg-foreground/5 border-foreground/10 text-foreground focus-visible:ring-primary placeholder:text-muted-foreground/50"
-                  placeholder="john@example.com"
+                  placeholder="budi@example.com"
                 />
               </div>
               
@@ -87,13 +109,20 @@ export const ContactSection = () => {
                 <label className="block text-sm font-medium text-muted-foreground mb-1.5">Message</label>
                 <Textarea 
                   rows={4}
+                  required
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="rounded-xl py-3 px-4 bg-foreground/5 border-foreground/10 text-foreground focus-visible:ring-primary resize-none placeholder:text-muted-foreground/50 min-h-[120px]"
-                  placeholder="How can I help you?"
+                  placeholder="Tell me about your project or inquiry..."
                 />
               </div>
 
-              <Button size="lg" className="w-full rounded-xl bg-primary text-primary-foreground font-bold shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] mt-4 h-12">
-                Send Message <Send className="w-4 h-4 ml-1" />
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full rounded-xl bg-primary text-primary-foreground font-bold shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] mt-4 h-12 cursor-pointer flex items-center justify-center gap-2"
+              >
+                Send via WhatsApp <MessageSquare className="w-4 h-4 ml-1" />
               </Button>
             </form>
           </div>

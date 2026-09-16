@@ -1,39 +1,52 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import projectKua from "../../assets/projects/Project-kua.webp";
+import projectKaryzen from "../../assets/projects/Project-karyzenstore.png";
+import projectBuberta from "../../assets/projects/project-buberta.png";
+import projectAlpa from "../../assets/projects/Project-alpa.webp";
+import projectSmartphi from "../../assets/projects/Project-smartphi.webp";
 
 export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "AI-Powered Design Platform",
-      subtitle: "Generative assets and automated scaling for e-commerce platforms",
-      link: "#",
-      image: "https://images.pexels.com/photos/8294591/pexels-photo-8294591.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      title: "KUA Tebing Tinggi Website",
+      subtitle: "Official institutional web portal and public religious service platform",
+      link: "https://kuatebingtinggi.pages.dev/",
+      image: projectKua,
       gridClass: "md:col-span-7 h-[420px]",
     },
     {
       id: 2,
-      title: "Global E-Learning",
-      subtitle: "Serving 1.2M+ active students worldwide",
-      link: "#",
-      image: "https://images.pexels.com/photos/15595050/pexels-photo-15595050.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      title: "Karyzen Store",
+      subtitle: "Modern e-commerce platform with intuitive catalog, cart, and checkout",
+      link: "https://5173-e68e5aa9-197d-452a-adc0-e391cbe0392d.daytonaproxy01.net/",
+      image: projectKaryzen,
       gridClass: "md:col-span-5 h-[420px]",
     },
     {
       id: 3,
-      title: "Modular ERP System",
-      subtitle: "Enterprise logistics & supply chain manufacturing engine",
-      link: "#",
-      image: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      gridClass: "md:col-span-5 h-[360px]",
+      title: "Buberta Finance",
+      subtitle: "Financial analytics and bookkeeping application for budgeting and tracking",
+      link: "https://buberta.pages.dev",
+      image: projectBuberta,
+      gridClass: "md:col-span-4 h-[380px]",
     },
     {
       id: 4,
-      title: "Fintech Predictive Dashboard",
-      subtitle: "Real-time analytics, algorithmic trading & risk modeling",
-      link: "#",
-      image: "https://images.pexels.com/photos/6169673/pexels-photo-6169673.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      gridClass: "md:col-span-7 h-[360px]",
+      title: "ALPA Apps",
+      subtitle: "Specialized administrative reporting platform for Islamic Religious Counselors",
+      link: "https://penyuluhagama.akun4939.workers.dev/",
+      image: projectAlpa,
+      gridClass: "md:col-span-4 h-[380px]",
+    },
+    {
+      id: 5,
+      title: "SmartPHI Mobile Apps",
+      subtitle: "Interactive mobile-first digital platform for public information & services",
+      link: "https://smartphi.pages.dev",
+      image: projectSmartphi,
+      gridClass: "md:col-span-4 h-[380px]",
     },
   ];
 
@@ -50,7 +63,7 @@ export const ProjectsSection = () => {
           Selected <span className="text-gradient-primary">Works</span>
         </h2>
         <p className="text-muted-foreground text-center md:text-left max-w-2xl text-lg">
-          A showcase of complex systems, elegant interfaces, and scalable applications I've engineered.
+          A showcase of scalable web applications, public portals, and digital platforms I've engineered.
         </p>
       </motion.div>
 
@@ -60,6 +73,8 @@ export const ProjectsSection = () => {
           <motion.a
             key={project.id}
             href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`group relative overflow-hidden rounded-[2.25rem] block shadow-xl border border-foreground/10 ${project.gridClass}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

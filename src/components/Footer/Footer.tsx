@@ -25,7 +25,7 @@ export const Footer = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: "https://id.linkedin.com/in/m-saman-03a3082b9?trk=people-guest_people_search-card", label: "LinkedIn" },
-    { icon: Instagram, href: "https://instagram.com/samandev", label: "Instagram" },
+    { icon: Instagram, href: "https://instagram.com/msamandev", label: "Instagram" },
     { icon: Phone, href: "https://wa.me/6285669570492", label: "WhatsApp" },
     { icon: Globe, href: "https://muhsaman.web.id", label: "Website" },
     { icon: Mail, href: "mailto:admin@muhsaman.web.id", label: "Email" },
