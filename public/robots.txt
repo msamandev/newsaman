@@ -1,0 +1,5 @@
+# Robots.txt for muhsaman.web.id
+User-agent: *
+Allow: /
+
+Sitemap: https://muhsaman.web.id/sitemap.xml
