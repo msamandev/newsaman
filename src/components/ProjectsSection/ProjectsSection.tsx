@@ -20,7 +20,7 @@ export const ProjectsSection = () => {
       id: 2,
       title: "Karyzen Store",
       subtitle: "Modern e-commerce platform with intuitive catalog, cart, and checkout",
-      link: "https://5173-e68e5aa9-197d-452a-adc0-e391cbe0392d.daytonaproxy01.net/",
+      link: "https://karyzenstore.freebuff.app/",
       image: projectKaryzen,
       gridClass: "md:col-span-5 h-[420px]",
     },
