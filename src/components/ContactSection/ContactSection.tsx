@@ -16,7 +16,15 @@ export const ContactSection = () => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.message.trim()) return;
 
-    const text = `Halo M. Saman,\n\nNama: ${formData.name}\nEmail: ${formData.email || "-"}\n\nPesan:\n${formData.message}`;
+    const text = `Halo kk M. Saman 👋
+
+Saya *${formData.name}* dengan email: ${formData.email || "-"} membutuhkan bantuan Anda.
+
+📝 *Pesan:*
+"${formData.message}"
+
+Mohon informasinya ya, terima kasih!`;
+
     const whatsappUrl = `https://wa.me/6285669570492?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
