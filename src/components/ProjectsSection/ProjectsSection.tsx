@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import projectKua from "../../assets/projects/Project-kua.webp";
 import projectKaryzen from "../../assets/projects/Project-karyzenstore.png";
+import projectSmartdompet from "../../assets/projects/Project-Smartdompet.webp";
 import projectBuberta from "../../assets/projects/project-buberta.png";
 import projectAlpa from "../../assets/projects/Project-alpa.webp";
 import projectSmartphi from "../../assets/projects/Project-smartphi.webp";
@@ -26,27 +27,35 @@ export const ProjectsSection = () => {
     },
     {
       id: 3,
+      title: "Smart Dompet App",
+      subtitle: "Digital personal finance and smart wallet application for daily expense tracking",
+      link: "https://smart-dompet-app.pages.dev/",
+      image: projectSmartdompet,
+      gridClass: "md:col-span-5 h-[420px]",
+    },
+    {
+      id: 4,
       title: "Buberta Finance",
       subtitle: "Financial analytics and bookkeeping application for budgeting and tracking",
       link: "https://buberta.pages.dev",
       image: projectBuberta,
-      gridClass: "md:col-span-4 h-[380px]",
+      gridClass: "md:col-span-7 h-[420px]",
     },
     {
-      id: 4,
+      id: 5,
       title: "ALPA Apps",
       subtitle: "Specialized administrative reporting platform for Islamic Religious Counselors",
       link: "https://penyuluhagama.akun4939.workers.dev/",
       image: projectAlpa,
-      gridClass: "md:col-span-4 h-[380px]",
+      gridClass: "md:col-span-7 h-[420px]",
     },
     {
-      id: 5,
+      id: 6,
       title: "SmartPHI Mobile Apps",
       subtitle: "Interactive mobile-first digital platform for public information & services",
       link: "https://smartphi.pages.dev",
       image: projectSmartphi,
-      gridClass: "md:col-span-4 h-[380px]",
+      gridClass: "md:col-span-5 h-[420px]",
     },
   ];
 

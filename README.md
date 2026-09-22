@@ -53,6 +53,7 @@ This repository contains the source code for the personal portfolio of **M. Sama
 
 - **[KUA Tebing Tinggi Website](https://kuatebingtinggi.pages.dev/)** — Official public religious service portal.
 - **[Karyzen Store](https://karyzenstore.freebuff.app/)** — Modern digital e-commerce platform with catalog and checkout workflows.
+- **[Smart Dompet App](https://smart-dompet-app.pages.dev/)** — Digital personal finance and smart wallet application.
 - **[Buberta Finance](https://buberta.pages.dev)** — Digital financial bookkeeping and budget tracking application.
 - **[ALPA Apps](https://penyuluhagama.akun4939.workers.dev/)** — Administrative and periodic reporting platform for Islamic Religious Counselors.
 - **[SmartPHI Mobile Apps](https://smartphi.pages.dev)** — Mobile-first public information and community service portal.
