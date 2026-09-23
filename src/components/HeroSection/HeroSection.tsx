@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Linkedin, Mail, Globe, Instagram, MessageCircle } from "lucide-react";
+import { ArrowRight, Download, Linkedin, Mail, Globe, Instagram, MessageCircle } from "lucide-react";
 import profileImg from "../../assets/profile.png";
 import TechStackSection from "../TechStackSection/TechStackSection";
 import { Button } from "../lightswind/button";
@@ -77,19 +77,24 @@ export const HeroSection = () => {
           </motion.p>
 
           <motion.div 
-            className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-10 w-full md:w-auto"
+            className="flex flex-wrap items-center justify-center md:justify-start gap-3.5 mb-10 w-full md:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <a href="#projects">
-              <Button size="lg" className="rounded-full px-7 h-12 bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1 cursor-pointer">
+              <Button size="lg" className="rounded-full px-6 h-12 bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1 cursor-pointer">
                 View Work <ArrowRight className="w-4 h-4" />
               </Button>
             </a>
+            <a href="/cv-muhsaman.pdf" target="_blank" rel="noopener noreferrer" download="CV-M-Saman.pdf">
+              <Button size="lg" variant="outline" className="rounded-full px-6 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10 cursor-pointer">
+                Download CV <Download className="w-4 h-4" />
+              </Button>
+            </a>
             <a href="https://wa.me/6285669570492" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="rounded-full px-7 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10 cursor-pointer">
-                Contact Me <MessageCircle className="w-4 h-4" />
+              <Button size="lg" variant="outline" className="rounded-full px-6 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10 cursor-pointer">
+                WhatsApp <MessageCircle className="w-4 h-4" />
               </Button>
             </a>
           </motion.div>
